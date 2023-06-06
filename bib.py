@@ -76,3 +76,25 @@ def escolha_plano():
         
         else:
             print("Não identificamos sua escolha, tente novamente.")
+
+def cadastrar_bike(bikes):
+    contador = 1
+    while True:
+        opc = int(input("Pressione 1) Cadastrar Bike ou 2) Sair da função: "))
+        if opc == 1:
+            nova_id = input("Insira o ID da nova Bike: ")
+            if nova_id in bikes:
+                print("ID já cadastrada, tente novamente!")
+                continue
+            else:
+                bikes.append(nova_id)
+                print("ID Cadastrado com Sucesso!")
+        elif opc == 2:
+            print("Função finalizada!")
+            break
+        else:
+            print("Não identificamos sua escolha, tente novamente.")
+            continue
+        with open('ID_bikes.txt', 'a') as arq_bikes:
+            arq_bikes.write(f'ID bike {contador}: {nova_id}\n')
+        contador += 1
