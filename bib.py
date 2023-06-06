@@ -37,3 +37,7 @@ class Usuario:
 
         print("Usuário ou senha inválidos, tente novamente.")
 
+def mostrar_planos(planos_loc):
+        print("Planos disponíveis:")
+        for p in range(len(planos_loc)):
+            print(planos_loc[p])
