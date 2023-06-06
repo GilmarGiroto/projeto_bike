@@ -41,3 +41,38 @@ def mostrar_planos(planos_loc):
         print("Planos disponíveis:")
         for p in range(len(planos_loc)):
             print(planos_loc[p])
+
+def escolha_plano():       
+    while True:   
+        escolha=int(input("Plano desejado: "))
+        if escolha == 1:
+            print("Plano Escolhido: Mensal - R$ 180,00")
+            confirm=int(input("Digite '1' para confirmar plano ou '2' para alterar: "))
+            if confirm == 1:
+                print("Plano mensal confirmado")
+                break           
+            else:
+                pass
+        elif escolha == 2:
+            print("Plano Escolhido: Quinzenal - R$ 90,00")
+            confirm=int(input("Digite '1' para confirmar plano ou '2' para alterar: "))
+            if confirm == 1:
+                print("Plano Quinzenal confirmado")
+                break
+            else:
+                pass
+                
+        elif escolha == 3:
+            print("Plano Escolhido: Semanal - R$ 45,00")
+            confirm=int(input("Digite '1' para confirmar plano ou '2' para alterar: "))
+            if confirm == 1:
+                print("Plano Semanal confirmado")
+                break
+            else:
+                pass
+        elif escolha == 0:
+            print("OFunção finalizada!")
+            break
+        
+        else:
+            print("Não identificamos sua escolha, tente novamente.")
